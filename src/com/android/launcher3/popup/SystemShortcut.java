@@ -76,6 +76,7 @@ public abstract class SystemShortcut<T extends BaseDraggingActivity> extends Ite
         public View.OnClickListener getOnClickListener(
                 BaseDraggingActivity activity, ItemInfo itemInfo) {
             return (view) -> {
+                dismissTaskMenuView(activity);
                 Rect sourceBounds = activity.getViewBounds(view);
                 Bundle opts = activity.getActivityLaunchOptionsAsBundle(view);
                 new PackageManagerHelper(activity).startDetailsActivityForInfo(
