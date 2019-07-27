@@ -81,7 +81,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <string name="google_feed_summary">Muestra la aplicación de Google deslizando hacia la derecha en la pantalla de inicio y usa su motor de búsqueda</string>
 
     <!-- Grid -->
-    <string name="num_default">Por defect</string>
+    <string name="num_default">Por defecto</string>
     <string name="number_of_columns_title">Número de columnas</string>
     <string name="number_of_rows_title">Número de filas</string>
     <string name="number_of_hotseat_title">Número de iconos del dock</string>
