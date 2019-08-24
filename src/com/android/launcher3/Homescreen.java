@@ -32,7 +32,7 @@ import android.preference.Preference.OnPreferenceChangeListener;
 import android.preference.SwitchPreference;
 import android.view.MenuItem;
 
-import com.android.internal.util.aosmp.aosmpUtils;
+import com.android.internal.util.vortex.VortexUtils;
 
 public class Homescreen extends SettingsActivity implements PreferenceFragment.OnPreferenceStartFragmentCallback {
 
@@ -83,7 +83,7 @@ public class Homescreen extends SettingsActivity implements PreferenceFragment.O
             SwitchPreference showQuickspace = (SwitchPreference)
                     findPreference(KEY_SHOW_QUICKSPACE);
 
-            if (!aosmpUtils.isPackageInstalled(mContext, LauncherTab.SEARCH_PACKAGE)) {
+            if (!VortexUtils.isPackageInstalled(mContext, LauncherTab.SEARCH_PACKAGE)) {
                 getPreferenceScreen().removePreference(feedIntegration);
             }
 

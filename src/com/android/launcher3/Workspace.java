@@ -58,7 +58,7 @@ import android.view.ViewGroup;
 import android.view.ViewTreeObserver;
 import android.widget.Toast;
 
-import com.android.internal.util.aosmp.aosmpUtils;
+import com.android.internal.util.vortex.VortexUtils;
 
 import com.android.launcher3.Launcher.LauncherOverlay;
 import com.android.launcher3.LauncherAppWidgetHost.ProviderChangedListener;
@@ -334,28 +334,28 @@ public class Workspace extends PagedView<WorkspacePageIndicator>
             case 0: // Stock
                 break;
             case 1: // Sleep
-                aosmpUtils.switchScreenOff(getContext());
+                VortexUtils.switchScreenOff(getContext());
                 break;
             case 2: // Flashlight
-                aosmpUtils.toggleCameraFlash();
+                VortexUtils.toggleCameraFlash();
                 break;
             case 3: // Google search
                 launchGoogleSearch(getContext());
                 break;
             case 4: // Volume panel
-                aosmpUtils.toggleVolumePanel(getContext());
+                VortexUtils.toggleVolumePanel(getContext());
                 break;
             case 5: // Clear notifications
-                aosmpUtils.clearAllNotifications();
+                VortexUtils.clearAllNotifications();
                 break;
             case 6: // Screenshot
-                aosmpUtils.takeScreenshot(true);
+                VortexUtils.takeScreenshot(true);
                 break;
             case 7: // Notifications
-                aosmpUtils.toggleNotifications();
+                VortexUtils.toggleNotifications();
                 break;
             case 8: // QS panel
-                aosmpUtils.toggleQsPanel();
+                VortexUtils.toggleQsPanel();
                 break;
         }
     }
@@ -3562,7 +3562,7 @@ public class Workspace extends PagedView<WorkspacePageIndicator>
         launchIntent.setPackage("com.google.android.googlequicksearchbox");
         launchIntent.setClassName("com.google.android.googlequicksearchbox",
                 "com.google.android.googlequicksearchbox.SearchActivity");
-        if (aosmpUtils.isPackageInstalled(context,
+        if (VortexUtils.isPackageInstalled(context,
                 "com.google.android.googlequicksearchbox")) {
             context.startActivity(launchIntent);
         } else {

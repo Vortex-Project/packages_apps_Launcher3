@@ -33,7 +33,7 @@ import com.android.launcher3.util.ConfigMonitor;
 import com.android.launcher3.util.Preconditions;
 import com.android.launcher3.util.SettingsObserver;
 
-import com.android.internal.util.aosmp.aosmpUtils;
+import com.android.internal.util.vortex.VortexUtils;
 
 import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutionException;
@@ -98,8 +98,8 @@ public class LauncherAppState {
         Preconditions.assertUIThread();
         mContext = context;
 
-        setSearchAppAvailable(aosmpUtils.isPackageInstalled(context, LauncherTab.SEARCH_PACKAGE));
-        setCalendarAppAvailable(aosmpUtils.isPackageInstalled(context, "com.google.android.calendar"));
+        setSearchAppAvailable(VortexUtils.isPackageInstalled(context, LauncherTab.SEARCH_PACKAGE));
+        setCalendarAppAvailable(VortexUtils.isPackageInstalled(context, "com.google.android.calendar"));
 
         mInvariantDeviceProfile = new InvariantDeviceProfile(mContext);
         mIconCache = new IconCache(mContext, mInvariantDeviceProfile);
