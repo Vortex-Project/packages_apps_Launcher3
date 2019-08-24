@@ -52,7 +52,7 @@ import com.android.launcher3.qsb.search.DefaultSearchView;
 import com.android.launcher3.search.SearchThread;
 import com.android.launcher3.util.PackageStatusReceiver;
 
-import com.android.internal.util.aosmp.aosmpUtils;
+import com.android.internal.util.vortex.VortexUtils;
 
 public class AllAppsQsbView extends BaseQsbView implements SearchUiManager, OnChangeListener {
 
@@ -268,7 +268,7 @@ public class AllAppsQsbView extends BaseQsbView implements SearchUiManager, OnCh
     }
 
     protected void setSearchType() {
-        boolean useDefaultSearch = !aosmpUtils.isPackageInstalled(Launcher.getLauncher(mContext), LauncherCallbacks.SEARCH_PACKAGE);
+        boolean useDefaultSearch = !VortexUtils.isPackageInstalled(Launcher.getLauncher(mContext), LauncherCallbacks.SEARCH_PACKAGE);
         if (mUseDefaultSearch != useDefaultSearch) {
             removeDefaultView();
             mUseDefaultSearch = useDefaultSearch;
