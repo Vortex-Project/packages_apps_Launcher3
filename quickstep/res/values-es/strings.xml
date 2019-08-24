@@ -26,4 +26,6 @@
     <string name="accessibility_close_task" msgid="5354563209433803643">"Cerrar"</string>
     <string name="recents_clear_all" msgid="5328176793634888831">"Borrar todo"</string>
     <string name="accessibility_recent_apps" msgid="4058661986695117371">"Aplicaciones recientes"</string>
+    <string name="recent_task_option_kill_app">"Matar"</string>
+    <string name="recents_app_killed">"Aplicación matada"</string>    
 </resources>
